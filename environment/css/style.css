@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    background-color:#0e9cdd;
+}
+.bday{
+    margin-top: 2rem;
+    text-align: center;
+    background: linear-gradient(180deg, #f80112 0%, #2602f5 110%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    font-size: 80px;
+    font-family: bday;
+}
+.wrapper{
+    position: relative;
+    width: 320px;
+    margin: 2rem auto 0 auto;
+    perspective: 1000px;
+    margin-bottom: 300px;
+}
+.img-area{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(-360deg) translateZ(-300px);
+    animation: animate 25s steps(1000, end) infinite;
+}
+.single-img{
+    position: absolute;
+}
+.single-img img{
+    width: 300px;
+    height: 200px;
+    border: 5px solid #93aa2d5e;
+}
+.single-img.img-one{
+    transform:rotateY(0deg) translateZ(300px);
+}
+.single-img.img-two{
+    transform:rotateY(60deg) translateZ(300px);
+}
+.single-img.img-three{
+    transform:rotateY(120deg) translateZ(300px);
+}
+.single-img.img-four{
+    transform:rotateY(180deg) translateZ(300px);
+}
+.single-img.img-five{
+    transform:rotateY(240deg) translateZ(300px);
+}
+.single-img.img-six{
+    transform:rotateY(300deg) translateZ(300px);
+}
+img{
+    filter: unset;
+    transition: 1s;
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+    transition: 1s;
+}
+img:hover{
+    transition: 1s;
+    filter: grayscale(100%);
+    transform: scale(1.3);
+}
+@keyframes animate{
+    from{
+        transform: rotateY(-360deg);
+    }
+    to{
+        transform: rotateY(0deg);
+    } 
+
+}
+.btn-info{
+    margin: 5rem 50%;
+    background: #094d6d;
+    border-radius: 0.5rem;
+    transition: 2s;
+}
+.btn-info:hover{
+    transform: scale(2.5);
+    transition: 1s;
+    color: blue;
+}
+#message{
+    display: none;
+    margin: 0 400px;
+    max-width: 80%;
+}
+.card-body{
+    background:lightblue;
+}
+.card-text{
+    font-style: oblique;
+    font-weight: bold;
+}
+#nuham{
+    display: none;
+    margin-top: 1rem;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+#btn-exit{
+    float: right;
+    height: 30px;
+    border-radius: 0.4rem;
+}
